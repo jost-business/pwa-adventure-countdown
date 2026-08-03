@@ -1,9 +1,9 @@
 @if (!isToday()) {
   <main class="countdown-page">
     <header>
-      <p class="eyebrow">?? Next Adventure</p>
+      <p class="eyebrow">✈️ Next Adventure</p>
       <h1>Casablanca<span class="dest-sub">, Morocco</span></h1>
-      <p class="subtitle">August 16, 2026 � 16:05</p>
+      <p class="subtitle">August 16, 2026</p>
     </header>
 
     @if (countdown(); as c) {
@@ -31,7 +31,7 @@
 
       <div class="sleeps">
         <span class="sleeps-value">{{ c.nights }}</span>
-        <span class="sleeps-label">sleeps to go ??</span>
+        <span class="sleeps-label">sleeps to go 🌙</span>
       </div>
     }
 
@@ -46,13 +46,13 @@
 } @else {
   <main class="today-page">
     <div class="celebration">
-      <div class="heart">??</div>
+      <div class="heart">❤️</div>
       <h1>Today is the Day!</h1>
       <p class="sub">Casablanca is waiting for you both.</p>
       <div class="photo-frame">
         <img src="assets/images/us.jpeg" alt="Us" />
       </div>
-      <p class="enjoy">?? Bon voyage. Enjoy every single moment.</p>
+      <p class="enjoy">✈️ Bon voyage. Enjoy every single moment.</p>
     </div>
   </main>
 }
