@@ -1,0 +1,226 @@
+// ── Romantic Dark Palette ──────────────────────────────────────────
+$rose:        #e91e63;
+$rose-light:  #f8bbd0;
+$rose-dim:    rgba(233, 30, 99, 0.12);
+$rose-border: rgba(233, 30, 99, 0.3);
+$text:        #ffffff;
+$text-muted:  rgba(255, 255, 255, 0.55);
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+// ── Countdown page ──────────────────────────────────────────────────
+.countdown-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 24px 72px;
+  gap: 40px;
+
+  header {
+    text-align: center;
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: $rose-light;
+      margin: 0 0 14px;
+      opacity: 0.85;
+    }
+
+    h1 {
+      font-size: clamp(30px, 8vw, 46px);
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.5px;
+      color: $text;
+
+      .dest-sub {
+        font-weight: 300;
+        opacity: 0.6;
+      }
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: $text-muted;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  // ── Countdown grid ────────────────────────────────────────────────
+  .countdown-grid {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+
+      .value {
+        font-size: clamp(38px, 10vw, 54px);
+        font-weight: 700;
+        color: $rose-light;
+        background: $rose-dim;
+        border: 1px solid $rose-border;
+        border-radius: 12px;
+        min-width: clamp(70px, 18vw, 88px);
+        padding: 14px 12px;
+        text-align: center;
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+        box-shadow:
+          0 0 28px rgba(233, 30, 99, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(12px);
+
+        &.seconds {
+          font-size: clamp(24px, 6vw, 34px);
+          min-width: clamp(50px, 13vw, 64px);
+          color: rgba(248, 187, 208, 0.45);
+          border-color: rgba(233, 30, 99, 0.14);
+          box-shadow: none;
+          background: rgba(233, 30, 99, 0.05);
+        }
+      }
+
+      .label {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $text-muted;
+      }
+    }
+
+    .sep {
+      font-size: 32px;
+      font-weight: 700;
+      color: $rose;
+      opacity: 0.55;
+      align-self: flex-start;
+      padding-top: 12px;
+      line-height: 1;
+
+      &.dim { opacity: 0.2; }
+    }
+  }
+
+  // ── Sleeps pill ───────────────────────────────────────────────────
+  .sleeps {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    background: $rose-dim;
+    border: 1px solid $rose-border;
+    border-radius: 40px;
+    padding: 10px 28px;
+
+    .sleeps-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: $rose-light;
+    }
+
+    .sleeps-label {
+      font-size: 14px;
+      color: $text-muted;
+    }
+  }
+
+  // ── Photo ─────────────────────────────────────────────────────────
+  .photo-frame {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+      0 0 48px rgba(233, 30, 99, 0.18),
+      0 20px 60px rgba(0, 0, 0, 0.55);
+    border: 1px solid $rose-border;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  // ── Quote ─────────────────────────────────────────────────────────
+  .quote {
+    font-size: 14px;
+    line-height: 1.9;
+    color: $text-muted;
+    text-align: center;
+    font-style: italic;
+    max-width: 300px;
+    margin: 0;
+  }
+}
+
+// ── Today / Celebration page ────────────────────────────────────────
+.today-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px 24px;
+
+  .celebration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+
+    .heart {
+      font-size: 80px;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    h1 {
+      font-size: clamp(28px, 7vw, 42px);
+      font-weight: 700;
+      margin: 0;
+      color: $text;
+    }
+
+    .sub {
+      font-size: 16px;
+      color: $text-muted;
+      margin: 0;
+    }
+
+    .photo-frame {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid $rose-border;
+      box-shadow: 0 0 48px rgba(233, 30, 99, 0.2);
+
+      img { width: 100%; height: auto; display: block; }
+    }
+
+    .enjoy {
+      font-size: 17px;
+      color: $rose-light;
+      margin: 0;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.12); }
+}
