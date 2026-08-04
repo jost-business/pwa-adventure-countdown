@@ -29,7 +29,6 @@ export class App implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.timer = setInterval(() => this.now.set(new Date()), 1000);
     this.initNotifications();
-    this.pingNtfy();
   }
 
   ngOnDestroy(): void {
@@ -38,14 +37,6 @@ export class App implements OnInit, OnDestroy {
 
   pad(n: number): string {
     return n.toString().padStart(2, '0');
-  }
-
-  private pingNtfy(): void {
-    fetch('https://ntfy.sh/jost_business_casablanca_countdown', {
-      method: 'POST',
-      body: '💕 She opened the countdown app!',
-      headers: { 'Title': 'Casablanca Countdown', 'Priority': 'default' }
-    }).catch(() => { /* silent fail if offline */ });
   }
 
   private async initNotifications(): Promise<void> {
